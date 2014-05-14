@@ -1,0 +1,306 @@
+{
+   "routes" : [
+      {
+         "bounds" : {
+            "northeast" : {
+               "lat" : 40.7660501,
+               "lng" : -73.9777149
+            },
+            "southwest" : {
+               "lat" : 40.7415437,
+               "lng" : -73.99280299999999
+            }
+         },
+         "copyrights" : "Map data ©2014 Google, Sanborn",
+         "legs" : [
+            {
+               "distance" : {
+                  "text" : "1.0 mi",
+                  "value" : 1540
+               },
+               "duration" : {
+                  "text" : "4 mins",
+                  "value" : 216
+               },
+               "end_address" : "200 5th Avenue, New York, NY 10010, USA",
+               "end_location" : {
+                  "lat" : 40.7419552,
+                  "lng" : -73.9893319
+               },
+               "start_address" : "350 5th Avenue, New York, NY 10118, USA",
+               "start_location" : {
+                  "lat" : 40.7479836,
+                  "lng" : -73.9848799
+               },
+               "steps" : [
+                  {
+                     "distance" : {
+                        "text" : "0.5 mi",
+                        "value" : 819
+                     },
+                     "duration" : {
+                        "text" : "1 min",
+                        "value" : 81
+                     },
+                     "end_location" : {
+                        "lat" : 40.7415437,
+                        "lng" : -73.98959259999999
+                     },
+                     "html_instructions" : "Head \u003cb\u003esouthwest\u003c/b\u003e on \u003cb\u003e5th Ave\u003c/b\u003e toward \u003cb\u003eE 33rd St\u003c/b\u003e",
+                     "polyline" : {
+                        "points" : "{quwFndqbMh@`@|BzAxBvAzBvAzBzAxBzAfBhAPL|BzA|BvAn@`@XRXRJFdAp@RPr@d@"
+                     },
+                     "start_location" : {
+                        "lat" : 40.7479836,
+                        "lng" : -73.9848799
+                     },
+                     "travel_mode" : "DRIVING"
+                  },
+                  {
+                     "distance" : {
+                        "text" : "0.2 mi",
+                        "value" : 309
+                     },
+                     "duration" : {
+                        "text" : "1 min",
+                        "value" : 38
+                     },
+                     "end_location" : {
+                        "lat" : 40.7428904,
+                        "lng" : -73.99280299999999
+                     },
+                     "html_instructions" : "Turn \u003cb\u003eright\u003c/b\u003e onto \u003cb\u003eW 23rd St\u003c/b\u003e",
+                     "maneuver" : "turn-right",
+                     "polyline" : {
+                        "points" : "sitwF|arbMsDhLyAvE"
+                     },
+                     "start_location" : {
+                        "lat" : 40.7415437,
+                        "lng" : -73.98959259999999
+                     },
+                     "travel_mode" : "DRIVING"
+                  },
+                  {
+                     "distance" : {
+                        "text" : "279 ft",
+                        "value" : 85
+                     },
+                     "duration" : {
+                        "text" : "1 min",
+                        "value" : 26
+                     },
+                     "end_location" : {
+                        "lat" : 40.7435581,
+                        "lng" : -73.9923115
+                     },
+                     "html_instructions" : "Take the 2nd \u003cb\u003eright\u003c/b\u003e onto \u003cb\u003eAvenue of the Americas\u003c/b\u003e",
+                     "polyline" : {
+                        "points" : "artwF~urbMeCaB"
+                     },
+                     "start_location" : {
+                        "lat" : 40.7428904,
+                        "lng" : -73.99280299999999
+                     },
+                     "travel_mode" : "DRIVING"
+                  },
+                  {
+                     "distance" : {
+                        "text" : "0.2 mi",
+                        "value" : 327
+                     },
+                     "duration" : {
+                        "text" : "1 min",
+                        "value" : 71
+                     },
+                     "end_location" : {
+                        "lat" : 40.7419552,
+                        "lng" : -73.9893319
+                     },
+                     "html_instructions" : "Take the 1st \u003cb\u003eright\u003c/b\u003e onto \u003cb\u003eW 24th St\u003c/b\u003e\u003cdiv style=\"font-size:0.9em\"\u003eDestination will be on the right\u003c/div\u003e",
+                     "polyline" : {
+                        "points" : "gvtwF|rrbMvFmQDE@CBCFAD?F?d@H"
+                     },
+                     "start_location" : {
+                        "lat" : 40.7435581,
+                        "lng" : -73.9923115
+                     },
+                     "travel_mode" : "DRIVING"
+                  }
+               ],
+               "via_waypoint" : []
+            },
+            {
+               "distance" : {
+                  "text" : "2.5 mi",
+                  "value" : 4090
+               },
+               "duration" : {
+                  "text" : "11 mins",
+                  "value" : 651
+               },
+               "end_address" : "100 West 56th Street, New York, NY 10019, USA",
+               "end_location" : {
+                  "lat" : 40.7636538,
+                  "lng" : -73.9777149
+               },
+               "start_address" : "200 5th Avenue, New York, NY 10010, USA",
+               "start_location" : {
+                  "lat" : 40.7419552,
+                  "lng" : -73.9893319
+               },
+               "steps" : [
+                  {
+                     "distance" : {
+                        "text" : "167 ft",
+                        "value" : 51
+                     },
+                     "duration" : {
+                        "text" : "1 min",
+                        "value" : 13
+                     },
+                     "end_location" : {
+                        "lat" : 40.7415437,
+                        "lng" : -73.98959259999999
+                     },
+                     "html_instructions" : "Head \u003cb\u003esouth\u003c/b\u003e on \u003cb\u003eW 24th St\u003c/b\u003e toward \u003cb\u003e5th Ave\u003c/b\u003e",
+                     "polyline" : {
+                        "points" : "gltwFh`rbMF@VJr@d@"
+                     },
+                     "start_location" : {
+                        "lat" : 40.7419552,
+                        "lng" : -73.9893319
+                     },
+                     "travel_mode" : "DRIVING"
+                  },
+                  {
+                     "distance" : {
+                        "text" : "0.2 mi",
+                        "value" : 309
+                     },
+                     "duration" : {
+                        "text" : "1 min",
+                        "value" : 38
+                     },
+                     "end_location" : {
+                        "lat" : 40.7428904,
+                        "lng" : -73.99280299999999
+                     },
+                     "html_instructions" : "Take the 1st \u003cb\u003eright\u003c/b\u003e onto \u003cb\u003eW 23rd St\u003c/b\u003e",
+                     "polyline" : {
+                        "points" : "sitwF|arbMsDhLyAvE"
+                     },
+                     "start_location" : {
+                        "lat" : 40.7415437,
+                        "lng" : -73.98959259999999
+                     },
+                     "travel_mode" : "DRIVING"
+                  },
+                  {
+                     "distance" : {
+                        "text" : "1.1 mi",
+                        "value" : 1762
+                     },
+                     "duration" : {
+                        "text" : "4 mins",
+                        "value" : 234
+                     },
+                     "end_location" : {
+                        "lat" : 40.7567653,
+                        "lng" : -73.98270230000001
+                     },
+                     "html_instructions" : "Take the 2nd \u003cb\u003eright\u003c/b\u003e onto \u003cb\u003eAvenue of the Americas\u003c/b\u003e",
+                     "polyline" : {
+                        "points" : "artwF~urbMeCaByBwA}ByA{B{AwBwA}ByA{ByA{ByA{B{AuByAQMuBuAgC}A{BwA{BwA{BwA}ByAwB_B}BwAIIeBeAUOeCcB}B{A{B{A"
+                     },
+                     "start_location" : {
+                        "lat" : 40.7428904,
+                        "lng" : -73.99280299999999
+                     },
+                     "travel_mode" : "DRIVING"
+                  },
+                  {
+                     "distance" : {
+                        "text" : "0.3 mi",
+                        "value" : 547
+                     },
+                     "duration" : {
+                        "text" : "2 mins",
+                        "value" : 109
+                     },
+                     "end_location" : {
+                        "lat" : 40.7591625,
+                        "lng" : -73.988378
+                     },
+                     "html_instructions" : "Turn \u003cb\u003eleft\u003c/b\u003e onto \u003cb\u003eW 45th St\u003c/b\u003e",
+                     "maneuver" : "turn-left",
+                     "polyline" : {
+                        "points" : "yhwwFzvpbMkFrPITGRi@`Bg@`B_B`Fm@jB"
+                     },
+                     "start_location" : {
+                        "lat" : 40.7567653,
+                        "lng" : -73.98270230000001
+                     },
+                     "travel_mode" : "DRIVING"
+                  },
+                  {
+                     "distance" : {
+                        "text" : "0.5 mi",
+                        "value" : 875
+                     },
+                     "duration" : {
+                        "text" : "2 mins",
+                        "value" : 97
+                     },
+                     "end_location" : {
+                        "lat" : 40.7660501,
+                        "lng" : -73.9833663
+                     },
+                     "html_instructions" : "Turn \u003cb\u003eright\u003c/b\u003e onto \u003cb\u003e8th Ave\u003c/b\u003e",
+                     "maneuver" : "turn-right",
+                     "polyline" : {
+                        "points" : "wwwwFjzqbM}ByA{B}A}BwA{B{A}ByA}B{A{B{A}ByA}ByA{B}A}ByA"
+                     },
+                     "start_location" : {
+                        "lat" : 40.7591625,
+                        "lng" : -73.988378
+                     },
+                     "travel_mode" : "DRIVING"
+                  },
+                  {
+                     "distance" : {
+                        "text" : "0.3 mi",
+                        "value" : 546
+                     },
+                     "duration" : {
+                        "text" : "3 mins",
+                        "value" : 160
+                     },
+                     "end_location" : {
+                        "lat" : 40.7636538,
+                        "lng" : -73.9777149
+                     },
+                     "html_instructions" : "Turn \u003cb\u003eright\u003c/b\u003e onto \u003cb\u003eW 56th St\u003c/b\u003e\u003cdiv style=\"font-size:0.9em\"\u003eDestination will be on the right\u003c/div\u003e",
+                     "maneuver" : "turn-right",
+                     "polyline" : {
+                        "points" : "ybywF`{pbMnBkG\\_A`BiFxAwEtC}I"
+                     },
+                     "start_location" : {
+                        "lat" : 40.7660501,
+                        "lng" : -73.9833663
+                     },
+                     "travel_mode" : "DRIVING"
+                  }
+               ],
+               "via_waypoint" : []
+            }
+         ],
+         "overview_polyline" : {
+            "points" : "{quwFndqbMfD|BtFnDnJnGdIhFd@ZxAbAr@d@sDhLyAvEeCaB|FsQDGLAl@H^Lr@d@sDhLyAvEeCaBwFqDmNgJwFuDgCgBuNcJyFqDwB_B}BwAoBoA{CsByFwDuFhQyDxLm@jB}ByAyFuDsNmJ{FsDyFwDlCkIzDaMtC}I"
+         },
+         "summary" : "Avenue of the Americas",
+         "warnings" : [],
+         "waypoint_order" : [ 0 ]
+      }
+   ],
+   "status" : "OK"
+}
