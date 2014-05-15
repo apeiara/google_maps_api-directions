@@ -1,7 +1,7 @@
 require "net/http"
 
 class GoogleMapsAPI::Directions::Request
-  BASE_PATH = "maps.googleapis.com/maps/api/directions/json"
+  BASE_PATH = "/maps/api/directions/json"
 
   attr_accessor :origin, :destination, :options, :http_adapter
 
@@ -10,7 +10,7 @@ class GoogleMapsAPI::Directions::Request
     destination = destination.to_ary.join(",") if destination.respond_to?(:to_ary)
     @origin = origin
     @destination = destination
-    @options = default_options.merge(options)
+    @options = options
     @http_adapter = nil
   end
 
@@ -31,9 +31,20 @@ class GoogleMapsAPI::Directions::Request
   end
 
   def uri
-    uri = URI("#{scheme}://#{BASE_PATH}")
-    query = prepared_options.merge({origin: origin, destination: destination})
-    uri.query = URI.encode_www_form(query)
+    base_host = GoogleMapsAPI::Core::BASE_HOST
+    uri = "#{scheme}://#{base_host}#{BASE_PATH}"
+    query_params = prepared_options.merge(
+      {origin: origin, destination: destination}
+    ).reject { |key, value| [:client, :channel].include?(key) }
+
+    if business_account?
+      query_params = query_params.reject { |key, value| [:key].include?(key) }
+      uri = "#{uri}?#{to_query(query_params)}"
+      uri = sign_uri(uri)
+    else
+      uri = URI("#{uri}?#{URI.encode_www_form(query_params)}")
+    end
+
     uri
   end
 
@@ -43,6 +54,10 @@ class GoogleMapsAPI::Directions::Request
 
   def http_adapter
     @http_adapter || Net::HTTP
+  end
+
+  def business_account?
+    options.key?(:key) && options.key?(:client)
   end
 
   private
@@ -58,7 +73,13 @@ class GoogleMapsAPI::Directions::Request
   end
 
   def prepared_options
-    options = self.options.dup
+    options = default_options.merge(self.options)
+
+    # Symbolizes the options keys
+    options.keys.each do |key|
+      options[(key.to_sym rescue key) || key] = options.delete(key)
+    end
+
     options[:departure_time] = time_or_date_to_unix(options[:departure_time])
     options[:arrival_time] = time_or_date_to_unix(options[:arrival_time])
 
@@ -78,5 +99,19 @@ class GoogleMapsAPI::Directions::Request
     return time_or_date.to_i if time_or_date.is_a?(Time)
     return time_or_date.to_time.to_i if time_or_date.is_a?(Date)
     time_or_date
+  end
+
+  def sign_uri(uri)
+    options = prepared_options
+    GoogleMapsAPI::Core::URISigner.sign(
+      uri.to_s, 
+      options[:client], 
+      options[:key], 
+      options[:channel]
+    )
+  end
+
+  def to_query(hash)
+    hash.to_a.map { |x| "#{x[0]}=#{x[1]}" }.join("&")
   end
 end

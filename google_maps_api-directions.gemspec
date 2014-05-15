@@ -21,5 +21,5 @@ Gem::Specification.new do |spec|
   spec.add_development_dependency "rake"
   spec.add_development_dependency "rspec", ">= 3.0.0.beta2", "< 4"
 
-  spec.add_dependency "google_maps_api-core", "~> 0"
+  spec.add_dependency "google_maps_api-core", "~> 0.2"
 end

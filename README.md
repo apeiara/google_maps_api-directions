@@ -25,6 +25,8 @@ GoogleMapsAPI::Directions.route(origin, destination, options = {})
 Origin and destination can be an a string or anything that supports ```to_ary```.
 Options is a *Symbols* Hash with optional parameters. (See https://developers.google.com/maps/documentation/directions/#RequestParameters for more information).
 
+For Google Business/Enterprise requests, include the ```:key```, ```:client``` and optionally, ```:channel``` in the options hash.
+
 ### Examples:
 
 ```ruby
