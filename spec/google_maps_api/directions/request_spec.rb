@@ -24,6 +24,11 @@ describe GoogleMapsAPI::Directions::Request do
       allow(subject.http_adapter).to receive(:get_response).and_return(false)
       expect { subject.perform }.to raise_error(GoogleMapsAPI::Directions::ResponseError)
     end
+
+    it "raises a ResponseError if the response is successful but has status 'OVER_QUERY_LIMIT'" do
+      allow(GoogleMapsAPI::Directions::Response).to receive(:from_json).and_return(GoogleMapsAPI::Directions::Response.new(nil, "OVER_QUERY_LIMIT"))
+      expect { subject.perform }.to raise_error(GoogleMapsAPI::Directions::ResponseError)
+    end
   end
 
   describe "#uri" do

@@ -19,15 +19,24 @@ class GoogleMapsAPI::Directions::Request
   end
 
   def perform
-    response = http_adapter.get_response(uri)
-    if response.is_a?(Net::HTTPSuccess)
-      return GoogleMapsAPI::Directions::Response.from_json(response.body)
+    http_response = http_adapter.get_response(uri)
+    if http_response.is_a?(Net::HTTPSuccess)
+      response = GoogleMapsAPI::Directions::Response.from_json(http_response.body)
+      if response.status == "OVER_QUERY_LIMIT"
+        raise_directions_exception(http_response)
+      else
+        return response
+      end
     else
-      msg = "The response was not successful (200). Call #response for datails."
-      exception = GoogleMapsAPI::Directions::ResponseError.new(msg)
-      exception.response = response
-      raise exception
+      raise_directions_exception(http_response)
     end
+  end
+
+  def raise_directions_exception(http_response)
+    msg = "The response was not successful (200). Call #response for datails."
+    exception = GoogleMapsAPI::Directions::ResponseError.new(msg)
+    exception.response = http_response
+    raise exception
   end
 
   def uri
@@ -104,9 +113,9 @@ class GoogleMapsAPI::Directions::Request
   def sign_uri(uri)
     options = prepared_options
     GoogleMapsAPI::Core::URISigner.sign(
-      uri.to_s, 
-      options[:client], 
-      options[:key], 
+      uri.to_s,
+      options[:client],
+      options[:key],
       options[:channel]
     )
   end
