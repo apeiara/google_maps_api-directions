@@ -23,7 +23,7 @@ class GoogleMapsAPI::Directions::Request
     if response.is_a?(Net::HTTPSuccess)
       return GoogleMapsAPI::Directions::Response.from_json(response.body)
     else
-      msg = "The response was not successful (200). Call #response for datails."
+      msg = "The response was not successful (200). Call #response for details."
       exception = GoogleMapsAPI::Directions::ResponseError.new(msg)
       exception.response = response
       raise exception
